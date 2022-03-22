@@ -1,9 +1,9 @@
 import {TurboNumber} from "./index"
 
 describe("math operation", function () {
-  it("substract", () => {
+  it("subtract", () => {
     const test = new TurboNumber(10);
-    test.substract(5)
+    test.subtract(5)
     expect(test.result()).toBe(5);
   });
   it("divide", () => {
@@ -14,5 +14,8 @@ describe("math operation", function () {
   it("doesn`t divide by 0", () => {
     const test = new TurboNumber(4);
     expect( () => test.divide(0)).toThrow("Cannot divide by zero")
-  } )
+  })
+  it("subtract and divide", () => {
+    expect(new TurboNumber(17).subtract(5).divide(-3).result()).toBe(-4)
+  })
 });
