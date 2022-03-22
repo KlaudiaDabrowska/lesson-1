@@ -12,6 +12,9 @@ export class TurboNumber {
     }
 
     divide(x:number): void {
+        if (x === 0){
+            throw new Error("Cannot divide by zero")
+        }
         this.num = this.num / x
     }
 

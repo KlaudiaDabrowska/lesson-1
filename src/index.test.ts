@@ -13,8 +13,6 @@ describe("math operation", function () {
   })
   it("doesn`t divide by 0", () => {
     const test = new TurboNumber(4);
-    test.divide(0);
-    expect(test.result()).toThrowError;
-    // expect( () => test.divide(0)).toThrow("can`t divide by zero")
+    expect( () => test.divide(0)).toThrow("Cannot divide by zero")
   } )
 });
